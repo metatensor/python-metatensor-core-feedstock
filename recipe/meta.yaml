@@ -9,6 +9,8 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/metatensor_core-{{ upstream_version }}.tar.gz
   sha256: b32890e19d29c6eae5a3e44324463164048bad79d9c63224a79c8fe8884eb0ad
+  patches:
+    - metatensor-rc-cmake-version.patch
 
 build:
   skip: true  # [py<39]

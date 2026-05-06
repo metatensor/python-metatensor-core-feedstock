@@ -1,0 +1,12 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -25,7 +25,7 @@ if(${METATENSOR_CORE_PYTHON_USE_EXTERNAL_LIB})
+         string(REGEX REPLACE "([0-9]*)\\.([0-9]*)\\.([0-9]*).*" "\\1.\\2.\\3" REQUIRED_METATENSOR_VERSION ${REQUIRED_METATENSOR_VERSION})
+     endif()
+ 
+-    find_package(metatensor ${REQUIRED_METATENSOR_VERSION} REQUIRED)
++    find_package(metatensor REQUIRED)
+ 
+     get_target_property(METATENSOR_LOCATION metatensor::shared LOCATION)
+     message(STATUS "Using external metatensor-core v${metatensor_VERSION} at ${METATENSOR_LOCATION}")
