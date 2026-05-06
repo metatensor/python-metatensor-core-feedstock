@@ -1,13 +1,14 @@
 {% set name = "metatensor-core" %}
-{% set version = "0.1.14" %}
+{% set version = "0.2.0.rc3" %}
+{% set upstream_version = "0.2.0rc3" %}
 
 package:
   name: python-{{ name }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/metatensor_core-{{ version }}.tar.gz
-  sha256: ee1f87bc045beadafa63cc0ccd0ebcf9c9e9fe8d619529d28775b0c22e0bbe19
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/metatensor_core-{{ upstream_version }}.tar.gz
+  sha256: b32890e19d29c6eae5a3e44324463164048bad79d9c63224a79c8fe8884eb0ad
 
 build:
   skip: true  # [py<39]
